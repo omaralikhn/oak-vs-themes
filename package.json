@@ -1,0 +1,58 @@
+{
+  "name": "oak-themes",
+  "displayName": "Oak Themes",
+  "description": "Dark color themes ported from oakcmd-ui: Blue Hour Dark, Everforest Dark, Marigold Storm Dark and Gruvbox Material.",
+  "version": "0.1.0",
+  "publisher": "omaralikhn",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omaralikhn/oak-vs-themes.git"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "oak",
+    "everforest",
+    "gruvbox"
+  ],
+  "scripts": {
+    "build": "node scripts/build-themes.mjs",
+    "package": "npm run build && vsce package"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Blue Hour Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/blue-hour-dark-color-theme.json"
+      },
+      {
+        "label": "Everforest Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/everforest-dark-color-theme.json"
+      },
+      {
+        "label": "Marigold Storm Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/marigold-storm-dark-color-theme.json"
+      },
+      {
+        "label": "Gruvbox Material",
+        "uiTheme": "vs-dark",
+        "path": "./themes/gruvbox-material-color-theme.json"
+      }
+    ]
+  }
+}
